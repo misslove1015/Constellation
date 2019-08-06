@@ -34,11 +34,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func setCollection(){
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width:(SCREEN_WIDTH-80)/3,height:(SCREEN_WIDTH-80)/3+15)
-        flowLayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        flowLayout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         flowLayout.minimumLineSpacing = 20
         flowLayout.minimumInteritemSpacing = 20
         if SCREEN_WIDTH <= 320 {
-            flowLayout.sectionInset = UIEdgeInsetsMake(10, 20, 10, 20)
+            flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
             flowLayout.minimumLineSpacing = 10
             flowLayout.minimumInteritemSpacing = 10
         }
@@ -66,7 +66,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         cell.date.text = dic.object(forKey: "date") as! String?
         cell.selectedBackgroundView = UIView()
         cell.selectedBackgroundView?.frame = cell.bounds;
-        cell.selectedBackgroundView?.backgroundColor = UIColor.init(colorLiteralRed: 195/255.0, green: 0, blue: 185/255.0, alpha: 1)
+        cell.selectedBackgroundView?.backgroundColor = UIColor(red: 195/255.0, green: 0, blue: 185/255.0, alpha: 1)
         cell.layer.borderColor = UIColor.init(white: 1, alpha: 0.5).cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 5

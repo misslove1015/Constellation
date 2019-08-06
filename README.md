@@ -3,5 +3,5 @@
 以前用Android手机时下过这样一个APP，换iPhone后在App Store没找到，自己写了一个<br>
 可以查看每个星座的描述，并进行星座配对，仅供娱乐
 
-![](https://raw.githubusercontent.com/misslove1015/Constellation/master/Constellation.gif)
+![](https://github.com/misslove1015/DemoPictures/blob/master/Constellation.gif)
 

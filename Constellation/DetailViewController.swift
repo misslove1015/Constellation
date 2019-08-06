@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
         let path = Bundle.main.path(forResource: "constellation", ofType: "plist")
         let array:NSArray! = NSArray.init(contentsOfFile: path!)
         textView.text = array.object(at: index) as? String
-        textView.textContainerInset = UIEdgeInsetsMake(20, 10, 30, 10)
+        textView.textContainerInset = UIEdgeInsets(top: 20, left: 10, bottom: 30, right: 10)
         textView.contentOffset = CGPoint(x:0,y:0)
 
     }

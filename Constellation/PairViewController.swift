@@ -45,7 +45,7 @@ class PairViewController: UIViewController,UITableViewDataSource,UITableViewDele
             firstImageWidth.constant = 40;
             secondImageWidth.constant = 40;
         }
-        textView.textContainerInset = UIEdgeInsetsMake(15, 0, 30, 0)
+        textView.textContainerInset = UIEdgeInsets(top: 15, left: 0, bottom: 30, right: 0)
         pairArray = NSArray.init(contentsOfFile: Bundle.main.path(forResource: "pair", ofType: "plist")!)
         self.setBorder(view: pairViewFirst)
         self.setBorder(view: pairViewSecond)
@@ -82,7 +82,7 @@ class PairViewController: UIViewController,UITableViewDataSource,UITableViewDele
         cell.name.text = dic.object(forKey: "name")as! String?
         cell.selectedBackgroundView = UIView()
         cell.selectedBackgroundView?.frame = cell.bounds;
-        cell.selectedBackgroundView?.backgroundColor = UIColor.init(colorLiteralRed: 195/255.0, green: 0, blue: 185/255.0, alpha: 1)
+        cell.selectedBackgroundView?.backgroundColor = UIColor(red: 195/255.0, green: 0, blue: 285/255.0, alpha: 1)
         return cell
     }
     
@@ -109,7 +109,7 @@ class PairViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     @IBAction func pair(_ sender: Any) {
         let array:NSArray = pairArray.object(at: index1) as! NSArray
-        textView.text = array.object(at: index2) as! String
+        textView.text = array.object(at: index2) as? String
         textView.contentOffset = CGPoint(x:0,y:0)
     }
     
